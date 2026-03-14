@@ -6,12 +6,19 @@ interface CarUIProps {
   position: { x: number; z: number }
   boostActive: boolean
   boostCooldown: number
+  onBack:()=>void
 }
 
-export function CarUI({ position, boostActive, boostCooldown }: CarUIProps) {
+export function CarUI({ position, boostActive, boostCooldown, onBack }: CarUIProps) {
   return (
     <div className="fixed inset-0 pointer-events-none z-50">
       {/* Boost Indicator */}
+      <button
+      onClick={onBack}
+      className="absolute top-8 left-8 pointer-events-auto bg-black/70 backdrop-blur-sm px-4 py-2 rounded-full border border-purple-500/50 text-purple-300 hover:text-white hover:border-purple-400 hover:bg-purple-500/10 transition-all text-sm font-medium"
+      >
+      ← Back to Home
+      </button>
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}
