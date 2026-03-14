@@ -11,7 +11,7 @@ import { useReducedMotion } from '../lib/hooks'
 import { CarUI } from './CarUI'
 import { useGameStore } from '../lib/store'
 
-export function Experience3D({ onBack }: { onBack: () => void })) {
+export function Experience3D({ onBack }: { onBack: () => void }) {
   const prefersReducedMotion = useReducedMotion()
   const vehicleData = useGameStore((state) => state.vehicleData)
   const collectibles = useGameStore((state) => state.collectibles)
