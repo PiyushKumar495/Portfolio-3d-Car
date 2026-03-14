@@ -104,20 +104,6 @@ export function UIOverlay() {
       {/* Navigation Compass */}
       <NavigationCompass />
 
-      {/* Mini location indicator */}
-      <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        className="fixed top-8 left-8 z-40"
-      >
-        <div className="glass p-4 rounded-2xl shadow-glow border-2 border-white/10">
-          <div className="text-sm font-bold mb-2 text-gray-400">Current Location</div>
-          <div className="text-lg font-bold text-dotnet-400">
-            {content ? content.title : 'Exploring...'}
-          </div>
-        </div>
-      </motion.div>
-
       {/* Enhanced Section info panel */}
       <AnimatePresence mode="wait">
         {content && (
