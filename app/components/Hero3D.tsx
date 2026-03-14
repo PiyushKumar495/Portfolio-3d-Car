@@ -79,8 +79,7 @@ export function Hero3D({ onStart }: Hero3DProps) {
 
         <motion.div variants={fadeInUp} className="mt-8">
           <a
-            href="http://localhost:3001"
-            target="_blank"
+            href="https://portfolio-frontend-puce-eight.vercel.app/"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-purple-500/40 text-purple-300 hover:border-purple-400 hover:text-white hover:bg-purple-500/10 transition-all text-sm font-medium"
           >
