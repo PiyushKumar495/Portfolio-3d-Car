@@ -24,7 +24,7 @@ export default function Home() {
         </>
       ) : (
         <>
-          <Experience3D />
+          <Experience3D onBack={() => setStarted(false)}/>
           <UIOverlay />
         </>
       )}
