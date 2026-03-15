@@ -325,7 +325,7 @@ export function UIOverlay() {
                           </div>
                           <div>
                             <div className="font-semibold text-teal-400">Email</div>
-                            <div className="text-sm text-gray-400">piyushkumar495@gmail.com</div>
+                            <div className="text-sm text-gray-400">piyushkumarbarnwal@gmail.com</div>
                           </div>
                         </a>
 
