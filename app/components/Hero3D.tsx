@@ -67,15 +67,31 @@ export function Hero3D({ onStart }: Hero3DProps) {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6"
         >
           {/* Classic Portfolio Button */}
-          <a
+          <motion.a
             href="https://portfolio-frontend-puce-eight.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-purple-500/40 text-purple-300 hover:border-purple-400 hover:text-white hover:bg-purple-500/10 transition-all font-medium"
+            className="group relative px-12 py-5 rounded-full font-bold text-xl overflow-hidden inline-flex items-center justify-center"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            style={{
+              background: 'linear-gradient(135deg, #7c3aed, #06b6d4)',
+              boxShadow:
+                '0 0 40px rgba(139, 92, 246, 0.6), 0 0 80px rgba(14, 165, 233, 0.4)',
+            }}
           >
-            <ExternalLink className="w-5 h-5" />
-            View Classic Portfolio
-          </a>
+            <span className="relative z-10 flex items-center gap-3 text-white">
+              <ExternalLink className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              View Classic Portfolio
+            </span>
+
+            <motion.div
+              className="absolute inset-0 bg-gradient-to-r from-purple-600 to-cyan-600"
+              initial={{ x: '-100%' }}
+              whileHover={{ x: '100%' }}
+              transition={{ duration: 0.5 }}
+            />
+          </motion.a>
 
           {/* Start Experience Button */}
           <motion.button
